@@ -42,8 +42,11 @@ public class FreeLookPlayerController : MonoBehaviour
     {
         Application.targetFrameRate = 60;
         initialYAngle = transform.eulerAngles.y;
+        if (gameObject.name.Contains("Cube"))
+            rawGyroRotation = new GameObject("GyroRaw2").transform;
+        else
+            rawGyroRotation = new GameObject("GyroRaw").transform;
 
-        rawGyroRotation = new GameObject("GyroRaw").transform;
         rawGyroRotation.position = transform.position;
         rawGyroRotation.rotation = transform.rotation;
 
@@ -214,6 +217,7 @@ public class FreeLookPlayerController : MonoBehaviour
             GamePlayManager.Instance.CannonCamera.enabled = true;
             GamePlayManager.Instance.CannonSlider.gameObject.SetActive(true);
             GamePlayManager.Instance.ShootButton.gameObject.SetActive(true);
+            GamePlayManager.Instance.ButtonDisable();
         }
 
         if (hit.collider.CompareTag("Hitter"))

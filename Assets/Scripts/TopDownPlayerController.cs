@@ -127,6 +127,7 @@ public class TopDownPlayerController : MonoBehaviour
             GamePlayManager.Instance.CannonCamera.enabled = true;
             GamePlayManager.Instance.CannonSlider.gameObject.SetActive(true);
             GamePlayManager.Instance.ShootButton.gameObject.SetActive(true);
+            GamePlayManager.Instance.ButtonDisable();
         }
 
         if (collision.gameObject.CompareTag("Hitter"))

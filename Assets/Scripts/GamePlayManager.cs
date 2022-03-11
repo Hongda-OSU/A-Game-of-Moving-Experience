@@ -341,6 +341,9 @@ public class GamePlayManager : MonoBehaviour
                 topDownPlayerController.GetComponent<TopDownPlayerController>().Shoot();
                 break;
         }
+        fpsCamSwitch.gameObject.SetActive(true);
+        freeLookCamSwitch.gameObject.SetActive(true);
+        topDownCamSwitch.gameObject.SetActive(true);
     }
 
     // handle player health change
@@ -412,6 +415,13 @@ public class GamePlayManager : MonoBehaviour
         gameOverCamera.enabled = true;
         restartButton.gameObject.SetActive(true);
         quitButton.gameObject.SetActive(true);
+    }
+
+    public void ButtonDisable()
+    {
+        fpsCamSwitch.gameObject.SetActive(false);
+        freeLookCamSwitch.gameObject.SetActive(false);
+        topDownCamSwitch.gameObject.SetActive(false);
     }
 
     private void RestartGame()
@@ -492,6 +502,8 @@ public class GamePlayManager : MonoBehaviour
     public void CreateFreeLookPlayer(Vector3 position, Quaternion rotation)
     {
         freeLookCubePlayerController.SetActive(true);
+        freeLookCubePlayerController.transform.position = position;
+        freeLookCubePlayerController.transform.rotation = rotation;
         //Instantiate(freeLookCubePlayerController, position, rotation);
         //Deactive();
     }
@@ -499,6 +511,8 @@ public class GamePlayManager : MonoBehaviour
     public void CreateFPSPlayer(Vector3 position, Quaternion rotation)
     {
         fpsCubePlayerController.SetActive(true);
+        fpsCubePlayerController.transform.position = position;
+        fpsCubePlayerController.transform.rotation = rotation;
         //Instantiate(fpsCubePlayerController, position, rotation);
         //Deactive();
     }
@@ -506,6 +520,8 @@ public class GamePlayManager : MonoBehaviour
     public void CreateTopDownPlayer()
     {
         topDownCubePlayerController.SetActive(true);
+        topDownCubePlayerController.transform.position = cube.position;
+        topDownCubePlayerController.transform.rotation = Quaternion.identity;
         //Instantiate(topDownCubePlayerController, cube.position, Quaternion.identity);
         //Deactive();
     }

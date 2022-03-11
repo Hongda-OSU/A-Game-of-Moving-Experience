@@ -8796,6 +8796,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4481148494230596748, guid: d93a195fb79b43a4e842c6fadbad3c01, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9848078
+      objectReference: {fileID: 0}
+    - target: {fileID: 4481148494230596748, guid: d93a195fb79b43a4e842c6fadbad3c01, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.17364816
+      objectReference: {fileID: 0}
+    - target: {fileID: 4481148494230596748, guid: d93a195fb79b43a4e842c6fadbad3c01, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4481148494230596748, guid: d93a195fb79b43a4e842c6fadbad3c01, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4481148494230596748, guid: d93a195fb79b43a4e842c6fadbad3c01, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4481148494674337579, guid: d93a195fb79b43a4e842c6fadbad3c01, type: 3}
       propertyPath: m_Name
       value: FreeLookPlayerCube
